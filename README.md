@@ -14,7 +14,6 @@ cd Marine-vessel-information-Server
 ```
 
 ## 기능 
-AisMessageConnect.java
 
 -
 1. TCP 소켓과 웹 소켓 연결
