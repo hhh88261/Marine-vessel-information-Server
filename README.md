@@ -28,10 +28,10 @@ try (BufferedReader reader = new BufferedReader(new InputStreamReader(socket.get
 ```
 2. dk.dma.ais.lib 의존성을 사용한 파싱
 ```
-  vdm.parse(response);
-  AisMessage aisMessage = AisMessage.getInstance(vdm);
-  System.out.println(aisMessage);
-  ```
+vdm.parse(response);
+AisMessage aisMessage = AisMessage.getInstance(vdm);
+System.out.println(aisMessage);
+```
 
 3. 해양수산부 API 요청을 통한 선박의 제원 정보 조회
 * API 정보 : https://www.data.go.kr/data/15055851/openapi.do (해양수산부 공개 API)
