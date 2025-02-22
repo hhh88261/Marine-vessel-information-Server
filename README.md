@@ -15,7 +15,6 @@ cd Marine-vessel-information-Server
 
 ## 기능 
 
--
 1. TCP 소켓과 웹 소켓 연결
 ```
 try (Socket socket = new Socket()) {
