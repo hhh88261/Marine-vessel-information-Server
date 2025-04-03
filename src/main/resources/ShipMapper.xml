@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.ShipMapper">
+
+    <insert id="insertShip" parameterType="org.example.Model.ShipModel">
+        DECLARE
+        table_name VARCHAR2(50);
+        BEGIN
+            -- 날짜 기반 테이블 이름 생성 (예: shiproute_20250328)
+            table_name := 'shiproute_' || TO_CHAR(SYSDATE, 'YYYYMMDD');
+
+            -- 테이블 존재 여부 확인 후 생성
+        EXECUTE IMMEDIATE '
+                BEGIN
+                    EXECUTE IMMEDIATE ''CREATE TABLE ' || table_name || ' AS SELECT * FROM shiproute WHERE 1=0'';
+                EXCEPTION
+                    WHEN OTHERS THEN NULL;
+                END;
+            ';
+
+        -- 데이터 삽입
+        EXECUTE IMMEDIATE '
+                INSERT INTO ' || table_name || ' (MMSI, LON, LAT, SHIP_TIME, TRUE_HEAD)
+                VALUES (:mmsi, :lon, :lat, TO_CHAR(SYSDATE, ''HH24:MI:SS''), :trueHead)
+            ' USING #{mmsi}, #{lon}, #{lat}, #{trueHead};
+        END;
+    </insert>
+
+</mapper>
