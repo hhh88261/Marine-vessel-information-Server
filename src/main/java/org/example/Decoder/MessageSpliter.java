@@ -1,4 +1,4 @@
-package org.example.Spliter;
+package org.example.Decoder;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;

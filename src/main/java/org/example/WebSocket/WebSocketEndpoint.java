@@ -6,7 +6,7 @@ import jakarta.websocket.OnOpen;
 import jakarta.websocket.Session;
 import jakarta.websocket.server.ServerEndpoint;
 //import org.example.Model.SelectShipModel;
-import org.example.Spliter.MessageSpliter;
+import org.example.Decoder.MessageSpliter;
 
 import java.io.IOException;
 import java.util.Set;

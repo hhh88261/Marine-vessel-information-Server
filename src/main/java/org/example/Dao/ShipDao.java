@@ -22,12 +22,4 @@ public class ShipDao {
             session.commit(); // 변경 사항을 커밋하여 데이터베이스에 반영
         }
     }
-
-//    public void insertPastData(SelectShipModel data) {
-//        try (var session = sqlSessionFactory.openSession()) {
-//            ShipMapper shipMapper = session.getMapper(ShipMapper.class);
-//            shipMapper.insertPastData(data);
-//            session.commit();
-//        }
-//    }
 }
