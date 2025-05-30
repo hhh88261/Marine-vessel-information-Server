@@ -1,4 +1,4 @@
-package org.example.Decoder;
+package org.example.Util;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -9,7 +9,7 @@ import org.example.Dao.ShipDao;
 import java.io.IOException;
 import java.io.Reader;
 
-public class MessageSpliter {
+public final class MessageSpliter {
 
     public void messageInputer(String PastMessage) throws IOException {
         /// db 연결
@@ -18,16 +18,8 @@ public class MessageSpliter {
 
         ShipDao shipDao = new ShipDao(sqlSessionFactory);
 
-        // SelectShipModel data = new SelectShipModel();
-
         String[] splitMessage = PastMessage.split(",");
 
-        // data.setShipDate(splitMessage[1]);
-        // data.setShipStartTime(splitMessage[2]);
-        // data.setShipEndTime(splitMessage[3]);
-
         System.out.println("과거 선박 정보: " + splitMessage[0] + splitMessage[1] + splitMessage[2]);
-
-        // shipDao.insertPastData(data);
     }
 }

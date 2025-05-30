@@ -1,5 +1,5 @@
 package org.example.Communication;
-import org.example.Decoder.Decoder;
+import org.example.Decoder.AisDecoderService.Decoder;
 
 import java.io.BufferedReader;
 import java.io.IOException;

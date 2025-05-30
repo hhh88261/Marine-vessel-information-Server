@@ -3,16 +3,15 @@ package org.example.MyBatisConfig;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.example.AisMessageConnect;
+import org.example.Decoder.AisDecoderService.Decoder;
 import org.example.Communication.TcpReciver;
 import org.example.Dao.ShipDao;
-
 import java.io.IOException;
 import java.io.Reader;
 
 public class MybatisDbHandler {
 
-    private AisMessageConnect aisMessageConnect;
+    private Decoder decoder;
 
     private TcpReciver tcpReciver;
 

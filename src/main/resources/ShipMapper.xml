@@ -22,8 +22,8 @@
 
         -- 데이터 삽입
         EXECUTE IMMEDIATE '
-                INSERT INTO ' || table_name || ' (MMSI, LON, LAT, SHIP_TIME, TRUE_HEAD)
-                VALUES (:mmsi, :lon, :lat, TO_CHAR(SYSDATE, ''HH24:MI:SS''), :trueHead)
+                INSERT INTO ' || table_name || ' (MMSI, LON, LAT, SHIP_TIME, TRUE_HEAD, DATE_RATE)
+                VALUES (:mmsi, :lon, :lat, TO_CHAR(SYSDATE, ''HH24:MI:SS''), :trueHead, SYSDATE)
             ' USING #{mmsi}, #{lon}, #{lat}, #{trueHead};
         END;
     </insert>

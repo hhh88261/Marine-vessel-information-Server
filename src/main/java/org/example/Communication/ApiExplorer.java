@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Communication;
 
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;

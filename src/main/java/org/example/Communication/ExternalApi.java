@@ -1,8 +1,7 @@
-package org.example.Decoder;
+package org.example.Communication;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.ApiExplorer;
 
 public class ExternalApi {
     public static String[] type5message(String callSign, String shipName) throws Exception {

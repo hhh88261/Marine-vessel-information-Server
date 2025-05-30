@@ -7,9 +7,7 @@ import org.example.Model.ShipModel;
 import org.example.ShipMapper;
 
 public class ShipDao {
-
     private SqlSessionFactory sqlSessionFactory;
-
     public ShipDao(SqlSessionFactory sqlSessionFactory) {
         this.sqlSessionFactory = sqlSessionFactory;
     }
