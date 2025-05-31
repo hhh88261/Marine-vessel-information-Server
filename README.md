@@ -1,7 +1,5 @@
 # AIS 메시지 수신 및 파싱 서버
 ## 아키텍처
-![Image](https://github.com/user-attachments/assets/f3e20a1e-b6ff-479f-9832-ddc298d5b06f)
-
 #### 흐름
 1. 애플리케이션 Main을 통해 진입 후 WebSocket 서버 및 DB 핸들러 초기화
 2. TcpReciver를 통해  외부에서 데이터 수신
